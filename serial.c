@@ -90,7 +90,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        if (i % m == 1)
+
+        if (i % m == 0 && i != 0 || i == 1)
         {
             printGrid(grid, w, h);
         }
@@ -124,6 +125,7 @@ int main()
                 }
             }
         }
+
         bool **temp = grid;
         grid = grid2;
         grid2 = temp;
